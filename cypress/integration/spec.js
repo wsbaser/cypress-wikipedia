@@ -55,5 +55,10 @@ const logSizes = () => {
 it('loads the site', () => {
   cy.visit('/')
   logSizes()
-  cy.screenshot('wiki', { capture: 'runner' })
+  cy.wait(3000)
+  cy.screenshot('runner', { capture: 'runner' })
+  cy.wait(3000)
+  cy.screenshot('fullPage', { capture: 'fullPage' })
+  cy.wait(3000)
+  cy.screenshot('viewport', {capture: 'viewport'})
 })
